@@ -7,6 +7,7 @@
                 title: "Dasar Pemrograman",
                 category: "basic",
                 categoryLabel: "BASIC PROGRAMMING",
+                source: "WPU",
                 mentor: "Sandhika Galih",
                 level: "Pemula",
                 students: "Unlimited",
@@ -349,7 +350,7 @@ filtered.forEach(course => {
     card.className = "bg-white rounded-2xl border-2 border-slate-200/80 hover:border-[#0d3b28] hover:ring-4 hover:ring-[#0d3b28]/20 shadow-md hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 overflow-hidden flex flex-col justify-between group cursor-pointer";
     card.onclick = () => openModal(course.id);
 
-    // Mengecek apakah harga berupa 'Free' atau berbayar untuk menentukan warna badge
+    // Pengecekan harga untuk badge
     const isFree = course.price.toLowerCase() === 'free';
     const badgeBg = isFree 
         ? 'bg-emerald-600 text-white shadow-emerald-900/20' 
@@ -357,10 +358,10 @@ filtered.forEach(course => {
 
     card.innerHTML = `
         <div>
+            <!-- Gambar & Badge Harga -->
             <div class="relative h-44 sm:h-48 lg:h-52 overflow-hidden bg-slate-100">
                 <img src="${course.image}" alt="${course.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 
-                <!-- Badge Label Harga -->
                 <div class="absolute top-3 right-3 z-10">
                     <span class="px-3 py-1 rounded-full text-[11px] font-extrabold shadow-md ${badgeBg} tracking-wide border border-white/20 backdrop-blur-sm">
                         ${course.price}
@@ -368,13 +369,24 @@ filtered.forEach(course => {
                 </div>
             </div>
 
+            <!-- Konten Utama Kartu -->
             <div class="p-5 sm:p-6 pb-3">
-                <span class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-widest block mb-1.5 sm:mb-2">
-                    ${course.categoryLabel}
-                </span>
+                
+                <!-- Baris Kategori & Label Sumber Lembaga -->
+                <div class="flex items-center justify-between gap-2 mb-1.5 sm:mb-2">
+                    <span class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                        ${course.categoryLabel}
+                    </span>
+                    <span class="text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-md flex items-center gap-1 shrink-0">
+                        <i class="fa-solid fa-building-columns text-[9px]"></i>
+                        ${course.source || 'HMPS SI'}
+                    </span>
+                </div>
+
                 <h3 class="text-sm sm:text-base lg:text-lg font-bold text-slate-900 group-hover:text-[#0d3b28] transition-colors line-clamp-2 leading-snug mb-2 sm:mb-3">
                     ${course.title}
                 </h3>
+                
                 <div class="flex items-center gap-2 mb-1">
                     <div class="flex text-amber-400 text-xs gap-0.5">
                         <i class="fa-solid fa-star"></i>
