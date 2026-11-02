@@ -69,26 +69,26 @@
                     </div>
                     <div>
                         <!-- Teks Brand/Judul Utama Navbar -->
-                        <span class="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-white block">HMPS SI Learn Course</span>
+                        <span class="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-white block">HMPS SI Learning Hub</span>
                     </div>
                 </a>
 
                 <!-- Sub-Elemen 1.2: Menu Navigasi Desktop (Tampilan Layar Sedang/Besar) -->
                 <div class="hidden md:flex items-center bg-white/95 backdrop-blur-md px-6 py-2 rounded-full text-[#0d3b28] font-semibold text-xs lg:text-sm shadow-md gap-3">
-                    <a href="#home" class="hover:text-amber-600 transition-colors">Home</a>
+                    <a href="#home" class="hover:text-amber-600 transition-colors">Beranda</a>
                     <span class="text-slate-300 font-normal">/</span>
-                    <a href="#courses" class="hover:text-amber-600 transition-colors">Courses</a>
+                    <a href="#courses" class="hover:text-amber-600 transition-colors">Langsung Belajar</a>
                     <span class="text-slate-300 font-normal">/</span>
-                    <a href="#partners" class="hover:text-amber-600 transition-colors">Expert & More Courses</a>
+                    <a href="#partners" class="hover:text-amber-600 transition-colors">Langsung ke sumbernya</a>
                     <span class="text-slate-300 font-normal">/</span>
-                    <a href="#about" class="hover:text-amber-600 transition-colors">About</a>
+                    <a href="#about" class="hover:text-amber-600 transition-colors">Sedikit Tentang HMPS SI</a>
                 </div>
 
                 <!-- Sub-Elemen 1.3: Tombol Dropdown Contact Us & Kartu Saluran Komunikasi -->
                 <div id="contactDropdownWrapper" class="hidden md:flex items-center relative">
                     <!-- Tombol Pemicu Dropdown Kontak -->
                     <button onclick="toggleContactMenu()" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold text-[#0d3b28] bg-white hover:bg-amber-300 transition-all shadow-md flex items-center gap-2 relative z-50">
-                        <span>Contact Us</span>
+                        <span>Hubungi Kami</span>
                         <i id="contactChevron" class="fa-solid fa-chevron-up text-[10px] sm:text-xs transition-transform duration-300"></i>
                     </button>
 
@@ -246,8 +246,8 @@
                             </svg>
                         </div>
                         <div class="pr-1">
-                            <p class="text-xs sm:text-sm font-extrabold text-slate-900 leading-none">500+</p>
-                            <p class="text-[9px] sm:text-[11px] text-slate-500 font-medium mt-0.5 whitespace-nowrap">Certified Instructors</p>
+                            <p class="text-xs sm:text-sm font-extrabold text-slate-900 leading-none">Para Mentor Professional</p>
+                            <p class="text-[9px] sm:text-[11px] text-slate-500 font-medium mt-0.5 whitespace-nowrap"></p>
                         </div>
                     </div>
 
@@ -263,8 +263,8 @@
                             </svg>
                         </div>
                         <div class="pr-1">
-                            <p class="text-xs sm:text-sm font-extrabold text-slate-900 leading-none">1,000+</p>
-                            <p class="text-[9px] sm:text-[11px] text-slate-500 font-medium mt-0.5 whitespace-nowrap">Sumber Pelajaran</p>
+                            <p class="text-xs sm:text-sm font-extrabold text-slate-900 leading-none">Sumber Pelajaran<br> Terpercaya</p>
+                            <p class="text-[9px] sm:text-[11px] text-slate-500 font-medium mt-0.5 whitespace-nowrap"></p>
                         </div>
                     </div>
 
@@ -282,8 +282,8 @@
                             </svg>
                         </div>
                         <div class="pr-1">
-                            <p class="text-xs sm:text-sm font-extrabold text-slate-900 leading-none">120k+</p>
-                            <p class="text-[9px] sm:text-[11px] text-slate-500 font-medium mt-0.5 whitespace-nowrap">Global Students</p>
+                            <p class="text-xs sm:text-sm font-extrabold text-slate-900 leading-none">Belajar dimana saja<br> dan kapan saja</p>
+                            <p class="text-[9px] sm:text-[11px] text-slate-500 font-medium mt-0.5 whitespace-nowrap"></p>
                         </div>
                     </div>
                 </div>
@@ -340,6 +340,8 @@
                     <button onclick="filterCategory('all')" class="category-btn active px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-[#0d3b28] text-white shadow-md">
                         SEMUA
                     </button>
+                    <button onclick="filterCategory('intro')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
+                        Sebelum Ngoding
                     <button onclick="filterCategory('wpu course')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
                         WPU COURSE
                     </button>
@@ -349,17 +351,20 @@
                     <button onclick="filterCategory('jagoansiber')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
                         JAGOAN SIBER
                     </button>
-                    <button onclick="filterCategory('marketing')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
-                        Digital Marketing
+                    <button onclick="filterCategory('php')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
+                        Belajar Bahasa PHP
                     </button>
                     <button onclick="filterCategory('web')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
-                        Web Dev
+                        WEB DEVELOPMENT
                     </button>
                     <button onclick="filterCategory('excel')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
-                        Excel
+                        EXCEL
                     </button>
-                    <button onclick="filterCategory('next')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
-                        Coming Soon
+                    <button onclick="filterCategory('js')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
+                        Belajar Bahasa Javascript
+                    </button>
+                    <button onclick="filterCategory('py')" class="category-btn px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-emerald-600 hover:bg-emerald-50/50">
+                        Belajar Bahasa Python
                     </button>
                 </div>
             </div>
@@ -493,10 +498,10 @@
                         <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-amber-400 text-[#0d3b28] flex items-center justify-center font-bold text-sm sm:text-base shadow-sm">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
-                        <span class="text-lg sm:text-xl font-bold text-white tracking-tight">HMPS SI Learning</span>
+                        <span class="text-lg sm:text-xl font-bold text-white tracking-tight">HMPS SI Learning Hub</span>
                     </div>
                     <p class="text-xs sm:text-sm text-emerald-100/75 max-w-sm leading-relaxed">
-                        Platform edukasi interaktif persembahan Himpunan Mahasiswa Program Studi Sistem Informasi untuk memperkuat talenta digital kampus.
+                        HMPS SI Learning Hub merupakan wadah kurasi sumber belajar dari berbagai platform eksternal. Seluruh materi dan konten tetap menjadi hak milik masing-masing penyedia. Akses terhadap materi mengikuti ketentuan yang berlaku pada platform sumber.
                     </p>
                 </div>
 
@@ -505,8 +510,8 @@
                     <h4 class="text-white font-semibold text-xs sm:text-sm mb-3 sm:mb-4 tracking-wide uppercase text-emerald-400">Navigasi</h4>
                     <ul class="space-y-2 text-xs sm:text-sm">
                         <li><a href="#home" class="text-emerald-100/80 hover:text-amber-400 transition-colors">Beranda</a></li>
-                        <li><a href="#courses" class="text-emerald-100/80 hover:text-amber-400 transition-colors">Modul Belajar</a></li>
-                        <li><a href="#partners" class="text-emerald-100/80 hover:text-amber-400 transition-colors">Para Ahli</a></li>
+                        <li><a href="#courses" class="text-emerald-100/80 hover:text-amber-400 transition-colors">Langsung Belajar</a></li>
+                        <li><a href="#partners" class="text-emerald-100/80 hover:text-amber-400 transition-colors">Sumber Pelajaran</a></li>
                         <li><a href="#about" class="text-emerald-100/80 hover:text-amber-400 transition-colors">Tentang HMPS SI</a></li>
                     </ul>
                 </div>
