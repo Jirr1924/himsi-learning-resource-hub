@@ -357,61 +357,63 @@ filtered.forEach(course => {
         : 'bg-amber-400 text-slate-900 shadow-amber-900/20';
 
     card.innerHTML = `
-        <div>
-            <!-- Gambar & Badge Harga -->
-            <div class="relative h-44 sm:h-48 lg:h-52 overflow-hidden bg-slate-100">
-                <img src="${course.image}" alt="${course.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                
-                <div class="absolute top-3 right-3 z-10">
-                    <span class="px-3 py-1 rounded-full text-[11px] font-extrabold shadow-md ${badgeBg} tracking-wide border border-white/20 backdrop-blur-sm">
-                        ${course.price}
-                    </span>
-                </div>
-            </div>
+                    <div>
+                        <!-- Gambar & Badge Harga -->
+                        <div class="relative h-44 sm:h-48 lg:h-52 overflow-hidden bg-slate-100">
+                            <img src="${course.image}" alt="${course.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- 🚩 [PENANDA 1: KODE UNTUK MENGATUR UKURAN LABEL HARGA] 🚩 -->
+                            <div class="absolute top-3 right-3 z-10">
+                                <span class="px-3.5 py-1.5 rounded-full text-base font-black sm:text-sm font-extrabold shadow-md ${badgeBg} tracking-wide border border-white/20 backdrop-blur-sm">
+                                    ${course.price}
+                                </span>
+                            </div>
+                        </div>
 
-            <!-- Konten Utama Kartu -->
-            <div class="p-5 sm:p-6 pb-3">
-                
-                <!-- Baris Kategori & Label Sumber Lembaga -->
-                <div class="flex items-center justify-between gap-2 mb-1.5 sm:mb-2">
-                    <span class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-widest">
-                        ${course.categoryLabel}
-                    </span>
-                    <span class="text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-md flex items-center gap-1 shrink-0">
-                        <i class="fa-solid fa-building-columns text-[9px]"></i>
-                        ${course.source || 'HMPS SI'}
-                    </span>
-                </div>
+                        <!-- Konten Utama Kartu -->
+                        <div class="p-5 sm:p-6 pb-3">
+                            
+                            <!-- 🚩 [PENANDA 2: KODE UNTUK MENGATUR UKURAN LABEL SUMBER PELAJARAN] 🚩 -->
+                            <div class="flex items-center justify-between gap-2 mb-2 sm:mb-3">
+                                <span class="text-base font-black font-bold text-slate-400 uppercase tracking-widest">
+                                    ${course.categoryLabel}
+                                </span>
+                                <!-- Ukuran Medium: text-xs font-bold, ikon text-xs, & padding px-2.5 py-1 -->
+                                <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shrink-0 shadow-sm">
+                                    <i class="fa-solid fa-building-columns text-xs"></i>
+                                    ${course.source || 'HMPS SI'}
+                                </span>
+                            </div>
 
-                <h3 class="text-sm sm:text-base lg:text-lg font-bold text-slate-900 group-hover:text-[#0d3b28] transition-colors line-clamp-2 leading-snug mb-2 sm:mb-3">
-                    ${course.title}
-                </h3>
-                
-                <div class="flex items-center gap-2 mb-1">
-                    <div class="flex text-amber-400 text-xs gap-0.5">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
+                            <h3 class="text-sm sm:text-base lg:text-lg font-bold text-slate-900 group-hover:text-[#0d3b28] transition-colors line-clamp-2 leading-snug mb-2 sm:mb-3">
+                                ${course.title}
+                            </h3>
+                            
+                            <div class="flex items-center gap-2 mb-1">
+                                <div class="flex text-amber-400 text-xs gap-0.5">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-xs font-bold text-slate-800">${course.rating}</span>
+                                <span class="text-xs text-slate-400 font-normal">(${course.reviewsCount})</span>
+                            </div>
+                        </div>
                     </div>
-                    <span class="text-xs font-bold text-slate-800">${course.rating}</span>
-                    <span class="text-xs text-slate-400 font-normal">(${course.reviewsCount})</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="px-5 sm:px-6 pb-5 pt-0">
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] sm:text-xs text-slate-500 font-medium">
-                <span class="flex items-center gap-1.5">
-                    <i class="fa-solid fa-user-group text-slate-400"></i> ${course.students} Enrolled
-                </span>
-                <span class="flex items-center gap-1.5">
-                    <i class="fa-solid fa-video text-slate-400"></i> ${course.videos}
-                </span>
-            </div>
-        </div>
-    `;
+                    <div class="px-5 sm:px-6 pb-5 pt-0">
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] sm:text-xs text-slate-500 font-medium">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-group text-slate-400"></i> ${course.students} Enrolled
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-video text-slate-400"></i> ${course.videos}
+                            </span>
+                        </div>
+                    </div>
+                `;
                 grid.appendChild(card);
             });
         }
